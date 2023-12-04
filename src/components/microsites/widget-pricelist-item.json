@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_microsites_widget_pricelist_items",
+  "info": {
+    "displayName": "Widget Pricelist Item"
+  },
+  "options": {},
+  "attributes": {
+    "itemTitle": {
+      "type": "string"
+    },
+    "itemPrice": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "itemImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_social_handles",
+  "info": {
+    "displayName": "SocialHandle",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "socialNetwork": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Twitter",
+        "Instagram",
+        "YouTube",
+        "TikTok"
+      ],
+      "required": true
+    },
+    "handle": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

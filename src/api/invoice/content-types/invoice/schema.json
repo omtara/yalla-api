@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "site": {
+      "type": "enumeration",
+      "enum": [
+        "microsites",
+        "pages",
+        "qrcodes"
+      ],
+      "required": false
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "invoiceNumber": {
+      "type": "integer"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "stripeOrderID": {
+      "type": "string"
+    },
+    "stripeInvoiceID": {
+      "type": "string"
+    },
+    "stripePaymentID": {
+      "type": "string"
+    }
+  }
+}

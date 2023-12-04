@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_profiles",
+  "info": {
+    "singularName": "user-profile",
+    "pluralName": "user-profiles",
+    "displayName": "User Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "userProfile"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "subscribedPromotionEmail": {
+      "type": "boolean",
+      "default": false
+    },
+    "billingAddress": {
+      "displayName": "address",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.address"
+    }
+  }
+}

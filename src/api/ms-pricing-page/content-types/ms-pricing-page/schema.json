@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "ms_pricing_pages",
+  "info": {
+    "singularName": "ms-pricing-page",
+    "pluralName": "ms-pricing-pages",
+    "displayName": "MS Pricing Page"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "footerFeaturedSites": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ms-user-site.ms-user-site"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.faq"
+    }
+  }
+}

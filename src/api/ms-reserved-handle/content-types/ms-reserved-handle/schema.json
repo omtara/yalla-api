@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ms_reserved_handles",
+  "info": {
+    "singularName": "ms-reserved-handle",
+    "pluralName": "ms-reserved-handles",
+    "displayName": "MS Reserved Handle"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "handle": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "enumeration",
+      "enum": [
+        "trademark",
+        "profanity",
+        "internal"
+      ]
+    }
+  }
+}

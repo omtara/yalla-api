@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ms_food_menu_items",
+  "info": {
+    "singularName": "ms-food-menu-item",
+    "pluralName": "ms-food-menu-items",
+    "displayName": "MS Food Menu Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "price": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "decimal"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "SortOrder": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "required": true
+    },
+    "approvalStatus": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Pending",
+        "Approved",
+        "Rejected"
+      ],
+      "default": "None",
+      "required": true
+    },
+    "site": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ms-user-site.ms-user-site"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ms-food-menu-category.ms-food-menu-category"
+    }
+  }
+}

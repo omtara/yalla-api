@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_microsites_widget_foodmenus",
+  "info": {
+    "displayName": "Widget Food Menu",
+    "icon": "restaurant",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "widgetType": {
+      "type": "enumeration",
+      "enum": [
+        "link",
+        "header",
+        "text",
+        "contacts",
+        "pricelist",
+        "food_menu"
+      ],
+      "required": true
+    },
+    "published": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "expanded": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "scheduleStart": {
+      "type": "date"
+    },
+    "scheduleEnd": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
