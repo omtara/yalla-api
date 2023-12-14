@@ -27,4 +27,8 @@ module.exports = ({ env }) => ({
   seo: {
     enabled: true,
   },
+  'microsite': {
+    enabled: true,
+    resolve: './src/plugins/microsite'
+  },
 });
