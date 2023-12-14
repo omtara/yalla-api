@@ -116,7 +116,12 @@
       },
       "type": "dynamiczone",
       "components": [
-        "microsites.widget-link"
+        "microsites.widget-link",
+        "microsites.widget-header",
+        "microsites.widget-foodmenu",
+        "microsites.widget-contact",
+        "microsites.widget-pricelist-item",
+        "microsites.widget-pricelist"
       ]
     },
     "googleAnalyticsID": {
