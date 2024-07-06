@@ -6,6 +6,15 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  documentation: {
+    enabled: true,
+    config: {
+      "x-strapi-config": {
+        plugins: ["upload", "users-permissions", "microsite"],
+      },
+      info: { version: "1.0.0" },
+    }
+  },
   email: {
     config: {
       provider: 'nodemailer',

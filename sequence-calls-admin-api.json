@@ -1,0 +1,81 @@
+================================================================================
+POST
+{"autorenew":false,"canceled":false,"user":{"disconnect":[],"connect":[]},"pageInterests":{"disconnect":[],"connect":[]},"widgets":[{"published":false,"expanded":false,"__component":"microsites.widget-pricelist","__temp_key__":1,"widgetType":"pricelist","items":[{"__temp_key__":1},{"__temp_key__":0}]}]}
+
+
+================================================================================
+GET
+{
+    "id": 1,
+    "pageName": null,
+    "tagline": null,
+    "handle": null,
+    "themeCode": null,
+    "seoTitle": null,
+    "seoDescription": null,
+    "googleAnalyticsID": null,
+    "fbPixelID": null,
+    "tiktokPixelID": null,
+    "CustomDomain": null,
+    "subscriptionPlanCode": null,
+    "subscriptionRenewal": null,
+    "autorenew": false,
+    "canceled": false,
+    "cancelReason": null,
+    "cancelFeedback": null,
+    "createdAt": "2023-12-17T08:01:16.776Z",
+    "updatedAt": "2023-12-17T08:01:16.776Z",
+    "publishedAt": null,
+    "locale": "en",
+    "socialHandles": [],
+    "user": {
+        "count": 0
+    },
+    "style": null,
+    "socialEmbedThumbnail": null,
+    "widgets": [
+        {
+            "__component": "microsites.widget-pricelist",
+            "id": 1,
+            "widgetType": "pricelist",
+            "published": false,
+            "expanded": false,
+            "scheduleStart": null,
+            "scheduleEnd": null,
+            "title": null,
+            "currencyCode": null,
+            "items": [
+                {
+                    "id": 1,
+                    "itemTitle": null,
+                    "itemPrice": null,
+                    "url": null,
+                    "itemImage": null
+                },
+                {
+                    "id": 2,
+                    "itemTitle": null,
+                    "itemPrice": null,
+                    "url": null,
+                    "itemImage": null
+                }
+            ]
+        }
+    ],
+    "pageInterests": {
+        "count": 0
+    },
+    "createdBy": {
+        "id": 1,
+        "firstname": "Omar",
+        "lastname": "Tarabichi",
+        "username": null
+    },
+    "updatedBy": {
+        "id": 1,
+        "firstname": "Omar",
+        "lastname": "Tarabichi",
+        "username": null
+    },
+    "localizations": []
+}

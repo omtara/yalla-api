@@ -91,6 +91,10 @@ export default {
           }
         }
     
+        if (!params.firstName || !params.lastName) {
+          throw new ApplicationError('First name and Last name are required');
+        }
+
         const newUser = {
           ...params,
           role: role.id,

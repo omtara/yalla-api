@@ -1,5 +1,12 @@
 {
-  "openapi": "3.0.0",
+  "x-strapi-config": {
+    "plugins": [
+      "upload",
+      "users-permissions",
+      "microsite"
+    ],
+    "path": "/documentation"
+  },
   "info": {
     "version": "1.0.0",
     "title": "DOCUMENTATION",
@@ -14,15 +21,9 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-08-27T16:10:05.463Z"
+    "x-generation-date": "2024-07-05T11:23:53.975Z"
   },
-  "x-strapi-config": {
-    "path": "/documentation",
-    "plugins": [
-      "upload",
-      "users-permissions"
-    ]
-  },
+  "openapi": "3.0.0",
   "servers": [
     {
       "url": "http://localhost:1337/api",
@@ -2395,6 +2396,12 @@
                                                   }
                                                 }
                                               },
+                                              "notifyWhenDomainsAvailable": {
+                                                "type": "boolean"
+                                              },
+                                              "defaultLanguage": {
+                                                "type": "string"
+                                              },
                                               "createdAt": {
                                                 "type": "string",
                                                 "format": "date-time"
@@ -3379,6 +3386,376 @@
                                   }
                                 }
                               }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "widgetType": {
+                                  "type": "string",
+                                  "enum": [
+                                    "link",
+                                    "header",
+                                    "text",
+                                    "contacts",
+                                    "pricelist",
+                                    "food_menu"
+                                  ]
+                                },
+                                "published": {
+                                  "type": "boolean"
+                                },
+                                "expanded": {
+                                  "type": "boolean"
+                                },
+                                "scheduleStart": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "scheduleEnd": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "title": {
+                                  "type": "string"
+                                },
+                                "style": {
+                                  "type": "string",
+                                  "enum": [
+                                    "h1",
+                                    "h2",
+                                    "h3"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "widgetType": {
+                                  "type": "string",
+                                  "enum": [
+                                    "link",
+                                    "header",
+                                    "text",
+                                    "contacts",
+                                    "pricelist",
+                                    "food_menu"
+                                  ]
+                                },
+                                "published": {
+                                  "type": "boolean"
+                                },
+                                "expanded": {
+                                  "type": "boolean"
+                                },
+                                "scheduleStart": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "scheduleEnd": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "title": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "widgetType": {
+                                  "type": "string",
+                                  "enum": [
+                                    "link",
+                                    "header",
+                                    "text",
+                                    "contacts",
+                                    "pricelist",
+                                    "food_menu"
+                                  ]
+                                },
+                                "published": {
+                                  "type": "boolean"
+                                },
+                                "expanded": {
+                                  "type": "boolean"
+                                },
+                                "scheduleStart": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "scheduleEnd": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "title": {
+                                  "type": "string"
+                                },
+                                "firstName": {
+                                  "type": "string"
+                                },
+                                "lastName": {
+                                  "type": "string"
+                                },
+                                "phone": {
+                                  "type": "string"
+                                },
+                                "email": {
+                                  "type": "string"
+                                },
+                                "url": {
+                                  "type": "string"
+                                },
+                                "addressLine1": {
+                                  "type": "string"
+                                },
+                                "addressLine2": {
+                                  "type": "string"
+                                },
+                                "city": {
+                                  "type": "string"
+                                },
+                                "country": {
+                                  "type": "string"
+                                },
+                                "postalCode": {
+                                  "type": "string"
+                                },
+                                "mapLat": {
+                                  "type": "number",
+                                  "format": "float"
+                                },
+                                "mapLon": {
+                                  "type": "number",
+                                  "format": "float"
+                                },
+                                "mapZoom": {
+                                  "type": "integer"
+                                },
+                                "notes": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "widgetType": {
+                                  "type": "string",
+                                  "enum": [
+                                    "link",
+                                    "header",
+                                    "text",
+                                    "contacts",
+                                    "pricelist",
+                                    "food_menu"
+                                  ]
+                                },
+                                "published": {
+                                  "type": "boolean"
+                                },
+                                "expanded": {
+                                  "type": "boolean"
+                                },
+                                "scheduleStart": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "scheduleEnd": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "title": {
+                                  "type": "string"
+                                },
+                                "currencyCode": {
+                                  "type": "string"
+                                },
+                                "items": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "itemTitle": {
+                                        "type": "string"
+                                      },
+                                      "itemPrice": {
+                                        "type": "string"
+                                      },
+                                      "url": {
+                                        "type": "string"
+                                      },
+                                      "itemImage": {
+                                        "type": "object",
+                                        "properties": {
+                                          "data": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "name": {
+                                                    "type": "string"
+                                                  },
+                                                  "alternativeText": {
+                                                    "type": "string"
+                                                  },
+                                                  "caption": {
+                                                    "type": "string"
+                                                  },
+                                                  "width": {
+                                                    "type": "integer"
+                                                  },
+                                                  "height": {
+                                                    "type": "integer"
+                                                  },
+                                                  "formats": {},
+                                                  "hash": {
+                                                    "type": "string"
+                                                  },
+                                                  "ext": {
+                                                    "type": "string"
+                                                  },
+                                                  "mime": {
+                                                    "type": "string"
+                                                  },
+                                                  "size": {
+                                                    "type": "number",
+                                                    "format": "float"
+                                                  },
+                                                  "url": {
+                                                    "type": "string"
+                                                  },
+                                                  "previewUrl": {
+                                                    "type": "string"
+                                                  },
+                                                  "provider": {
+                                                    "type": "string"
+                                                  },
+                                                  "provider_metadata": {},
+                                                  "related": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "array",
+                                                        "items": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "folder": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "folderPath": {
+                                                    "type": "string"
+                                                  },
+                                                  "createdAt": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "updatedAt": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "createdBy": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "updatedBy": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           ]
                         }
@@ -3413,6 +3790,91 @@
                       },
                       "cancelFeedback": {
                         "type": "string"
+                      },
+                      "pageInterests": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {
+                                    "code": {
+                                      "type": "string"
+                                    },
+                                    "label": {
+                                      "type": "string"
+                                    },
+                                    "createdAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "updatedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "publishedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "createdBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "updatedBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "localizations": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "array",
+                                          "items": {}
+                                        }
+                                      }
+                                    },
+                                    "locale": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
                       },
                       "createdAt": {
                         "type": "string",
@@ -4804,6 +5266,12 @@
                                                   }
                                                 }
                                               },
+                                              "notifyWhenDomainsAvailable": {
+                                                "type": "boolean"
+                                              },
+                                              "defaultLanguage": {
+                                                "type": "string"
+                                              },
                                               "createdAt": {
                                                 "type": "string",
                                                 "format": "date-time"
@@ -5557,6 +6025,376 @@
                                   }
                                 }
                               }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "widgetType": {
+                                  "type": "string",
+                                  "enum": [
+                                    "link",
+                                    "header",
+                                    "text",
+                                    "contacts",
+                                    "pricelist",
+                                    "food_menu"
+                                  ]
+                                },
+                                "published": {
+                                  "type": "boolean"
+                                },
+                                "expanded": {
+                                  "type": "boolean"
+                                },
+                                "scheduleStart": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "scheduleEnd": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "title": {
+                                  "type": "string"
+                                },
+                                "style": {
+                                  "type": "string",
+                                  "enum": [
+                                    "h1",
+                                    "h2",
+                                    "h3"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "widgetType": {
+                                  "type": "string",
+                                  "enum": [
+                                    "link",
+                                    "header",
+                                    "text",
+                                    "contacts",
+                                    "pricelist",
+                                    "food_menu"
+                                  ]
+                                },
+                                "published": {
+                                  "type": "boolean"
+                                },
+                                "expanded": {
+                                  "type": "boolean"
+                                },
+                                "scheduleStart": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "scheduleEnd": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "title": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "widgetType": {
+                                  "type": "string",
+                                  "enum": [
+                                    "link",
+                                    "header",
+                                    "text",
+                                    "contacts",
+                                    "pricelist",
+                                    "food_menu"
+                                  ]
+                                },
+                                "published": {
+                                  "type": "boolean"
+                                },
+                                "expanded": {
+                                  "type": "boolean"
+                                },
+                                "scheduleStart": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "scheduleEnd": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "title": {
+                                  "type": "string"
+                                },
+                                "firstName": {
+                                  "type": "string"
+                                },
+                                "lastName": {
+                                  "type": "string"
+                                },
+                                "phone": {
+                                  "type": "string"
+                                },
+                                "email": {
+                                  "type": "string"
+                                },
+                                "url": {
+                                  "type": "string"
+                                },
+                                "addressLine1": {
+                                  "type": "string"
+                                },
+                                "addressLine2": {
+                                  "type": "string"
+                                },
+                                "city": {
+                                  "type": "string"
+                                },
+                                "country": {
+                                  "type": "string"
+                                },
+                                "postalCode": {
+                                  "type": "string"
+                                },
+                                "mapLat": {
+                                  "type": "number",
+                                  "format": "float"
+                                },
+                                "mapLon": {
+                                  "type": "number",
+                                  "format": "float"
+                                },
+                                "mapZoom": {
+                                  "type": "integer"
+                                },
+                                "notes": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "widgetType": {
+                                  "type": "string",
+                                  "enum": [
+                                    "link",
+                                    "header",
+                                    "text",
+                                    "contacts",
+                                    "pricelist",
+                                    "food_menu"
+                                  ]
+                                },
+                                "published": {
+                                  "type": "boolean"
+                                },
+                                "expanded": {
+                                  "type": "boolean"
+                                },
+                                "scheduleStart": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "scheduleEnd": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "title": {
+                                  "type": "string"
+                                },
+                                "currencyCode": {
+                                  "type": "string"
+                                },
+                                "items": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "itemTitle": {
+                                        "type": "string"
+                                      },
+                                      "itemPrice": {
+                                        "type": "string"
+                                      },
+                                      "url": {
+                                        "type": "string"
+                                      },
+                                      "itemImage": {
+                                        "type": "object",
+                                        "properties": {
+                                          "data": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "name": {
+                                                    "type": "string"
+                                                  },
+                                                  "alternativeText": {
+                                                    "type": "string"
+                                                  },
+                                                  "caption": {
+                                                    "type": "string"
+                                                  },
+                                                  "width": {
+                                                    "type": "integer"
+                                                  },
+                                                  "height": {
+                                                    "type": "integer"
+                                                  },
+                                                  "formats": {},
+                                                  "hash": {
+                                                    "type": "string"
+                                                  },
+                                                  "ext": {
+                                                    "type": "string"
+                                                  },
+                                                  "mime": {
+                                                    "type": "string"
+                                                  },
+                                                  "size": {
+                                                    "type": "number",
+                                                    "format": "float"
+                                                  },
+                                                  "url": {
+                                                    "type": "string"
+                                                  },
+                                                  "previewUrl": {
+                                                    "type": "string"
+                                                  },
+                                                  "provider": {
+                                                    "type": "string"
+                                                  },
+                                                  "provider_metadata": {},
+                                                  "related": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "array",
+                                                        "items": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "folder": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "folderPath": {
+                                                    "type": "string"
+                                                  },
+                                                  "createdAt": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "updatedAt": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "createdBy": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "updatedBy": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           ]
                         }
@@ -5591,6 +6429,91 @@
                       },
                       "cancelFeedback": {
                         "type": "string"
+                      },
+                      "pageInterests": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {
+                                    "code": {
+                                      "type": "string"
+                                    },
+                                    "label": {
+                                      "type": "string"
+                                    },
+                                    "createdAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "updatedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "publishedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "createdBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "updatedBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "localizations": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "array",
+                                          "items": {}
+                                        }
+                                      }
+                                    },
+                                    "locale": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
                       },
                       "createdAt": {
                         "type": "string",
@@ -6627,6 +7550,12 @@
                                                     }
                                                   }
                                                 },
+                                                "notifyWhenDomainsAvailable": {
+                                                  "type": "boolean"
+                                                },
+                                                "defaultLanguage": {
+                                                  "type": "string"
+                                                },
                                                 "createdAt": {
                                                   "type": "string",
                                                   "format": "date-time"
@@ -7611,6 +8540,376 @@
                                     }
                                   }
                                 }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "__component": {
+                                    "type": "string"
+                                  },
+                                  "widgetType": {
+                                    "type": "string",
+                                    "enum": [
+                                      "link",
+                                      "header",
+                                      "text",
+                                      "contacts",
+                                      "pricelist",
+                                      "food_menu"
+                                    ]
+                                  },
+                                  "published": {
+                                    "type": "boolean"
+                                  },
+                                  "expanded": {
+                                    "type": "boolean"
+                                  },
+                                  "scheduleStart": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "scheduleEnd": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  },
+                                  "style": {
+                                    "type": "string",
+                                    "enum": [
+                                      "h1",
+                                      "h2",
+                                      "h3"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "__component": {
+                                    "type": "string"
+                                  },
+                                  "widgetType": {
+                                    "type": "string",
+                                    "enum": [
+                                      "link",
+                                      "header",
+                                      "text",
+                                      "contacts",
+                                      "pricelist",
+                                      "food_menu"
+                                    ]
+                                  },
+                                  "published": {
+                                    "type": "boolean"
+                                  },
+                                  "expanded": {
+                                    "type": "boolean"
+                                  },
+                                  "scheduleStart": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "scheduleEnd": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "__component": {
+                                    "type": "string"
+                                  },
+                                  "widgetType": {
+                                    "type": "string",
+                                    "enum": [
+                                      "link",
+                                      "header",
+                                      "text",
+                                      "contacts",
+                                      "pricelist",
+                                      "food_menu"
+                                    ]
+                                  },
+                                  "published": {
+                                    "type": "boolean"
+                                  },
+                                  "expanded": {
+                                    "type": "boolean"
+                                  },
+                                  "scheduleStart": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "scheduleEnd": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  },
+                                  "firstName": {
+                                    "type": "string"
+                                  },
+                                  "lastName": {
+                                    "type": "string"
+                                  },
+                                  "phone": {
+                                    "type": "string"
+                                  },
+                                  "email": {
+                                    "type": "string"
+                                  },
+                                  "url": {
+                                    "type": "string"
+                                  },
+                                  "addressLine1": {
+                                    "type": "string"
+                                  },
+                                  "addressLine2": {
+                                    "type": "string"
+                                  },
+                                  "city": {
+                                    "type": "string"
+                                  },
+                                  "country": {
+                                    "type": "string"
+                                  },
+                                  "postalCode": {
+                                    "type": "string"
+                                  },
+                                  "mapLat": {
+                                    "type": "number",
+                                    "format": "float"
+                                  },
+                                  "mapLon": {
+                                    "type": "number",
+                                    "format": "float"
+                                  },
+                                  "mapZoom": {
+                                    "type": "integer"
+                                  },
+                                  "notes": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "__component": {
+                                    "type": "string"
+                                  },
+                                  "widgetType": {
+                                    "type": "string",
+                                    "enum": [
+                                      "link",
+                                      "header",
+                                      "text",
+                                      "contacts",
+                                      "pricelist",
+                                      "food_menu"
+                                    ]
+                                  },
+                                  "published": {
+                                    "type": "boolean"
+                                  },
+                                  "expanded": {
+                                    "type": "boolean"
+                                  },
+                                  "scheduleStart": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "scheduleEnd": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  },
+                                  "currencyCode": {
+                                    "type": "string"
+                                  },
+                                  "items": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "number"
+                                        },
+                                        "itemTitle": {
+                                          "type": "string"
+                                        },
+                                        "itemPrice": {
+                                          "type": "string"
+                                        },
+                                        "url": {
+                                          "type": "string"
+                                        },
+                                        "itemImage": {
+                                          "type": "object",
+                                          "properties": {
+                                            "data": {
+                                              "type": "object",
+                                              "properties": {
+                                                "id": {
+                                                  "type": "number"
+                                                },
+                                                "attributes": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "name": {
+                                                      "type": "string"
+                                                    },
+                                                    "alternativeText": {
+                                                      "type": "string"
+                                                    },
+                                                    "caption": {
+                                                      "type": "string"
+                                                    },
+                                                    "width": {
+                                                      "type": "integer"
+                                                    },
+                                                    "height": {
+                                                      "type": "integer"
+                                                    },
+                                                    "formats": {},
+                                                    "hash": {
+                                                      "type": "string"
+                                                    },
+                                                    "ext": {
+                                                      "type": "string"
+                                                    },
+                                                    "mime": {
+                                                      "type": "string"
+                                                    },
+                                                    "size": {
+                                                      "type": "number",
+                                                      "format": "float"
+                                                    },
+                                                    "url": {
+                                                      "type": "string"
+                                                    },
+                                                    "previewUrl": {
+                                                      "type": "string"
+                                                    },
+                                                    "provider": {
+                                                      "type": "string"
+                                                    },
+                                                    "provider_metadata": {},
+                                                    "related": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "id": {
+                                                                "type": "number"
+                                                              },
+                                                              "attributes": {
+                                                                "type": "object",
+                                                                "properties": {}
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "folder": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "folderPath": {
+                                                      "type": "string"
+                                                    },
+                                                    "createdAt": {
+                                                      "type": "string",
+                                                      "format": "date-time"
+                                                    },
+                                                    "updatedAt": {
+                                                      "type": "string",
+                                                      "format": "date-time"
+                                                    },
+                                                    "createdBy": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "updatedBy": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
                               }
                             ]
                           }
@@ -7645,6 +8944,91 @@
                         },
                         "cancelFeedback": {
                           "type": "string"
+                        },
+                        "pageInterests": {
+                          "type": "object",
+                          "properties": {
+                            "data": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "attributes": {
+                                    "type": "object",
+                                    "properties": {
+                                      "code": {
+                                        "type": "string"
+                                      },
+                                      "label": {
+                                        "type": "string"
+                                      },
+                                      "createdAt": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      "updatedAt": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      "publishedAt": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      "createdBy": {
+                                        "type": "object",
+                                        "properties": {
+                                          "data": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {}
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "updatedBy": {
+                                        "type": "object",
+                                        "properties": {
+                                          "data": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {}
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "localizations": {
+                                        "type": "object",
+                                        "properties": {
+                                          "data": {
+                                            "type": "array",
+                                            "items": {}
+                                          }
+                                        }
+                                      },
+                                      "locale": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         },
                         "createdAt": {
                           "type": "string",
@@ -9808,6 +11192,12 @@
                                                     }
                                                   }
                                                 },
+                                                "notifyWhenDomainsAvailable": {
+                                                  "type": "boolean"
+                                                },
+                                                "defaultLanguage": {
+                                                  "type": "string"
+                                                },
                                                 "createdAt": {
                                                   "type": "string",
                                                   "format": "date-time"
@@ -10792,6 +12182,376 @@
                                     }
                                   }
                                 }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "__component": {
+                                    "type": "string"
+                                  },
+                                  "widgetType": {
+                                    "type": "string",
+                                    "enum": [
+                                      "link",
+                                      "header",
+                                      "text",
+                                      "contacts",
+                                      "pricelist",
+                                      "food_menu"
+                                    ]
+                                  },
+                                  "published": {
+                                    "type": "boolean"
+                                  },
+                                  "expanded": {
+                                    "type": "boolean"
+                                  },
+                                  "scheduleStart": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "scheduleEnd": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  },
+                                  "style": {
+                                    "type": "string",
+                                    "enum": [
+                                      "h1",
+                                      "h2",
+                                      "h3"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "__component": {
+                                    "type": "string"
+                                  },
+                                  "widgetType": {
+                                    "type": "string",
+                                    "enum": [
+                                      "link",
+                                      "header",
+                                      "text",
+                                      "contacts",
+                                      "pricelist",
+                                      "food_menu"
+                                    ]
+                                  },
+                                  "published": {
+                                    "type": "boolean"
+                                  },
+                                  "expanded": {
+                                    "type": "boolean"
+                                  },
+                                  "scheduleStart": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "scheduleEnd": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "__component": {
+                                    "type": "string"
+                                  },
+                                  "widgetType": {
+                                    "type": "string",
+                                    "enum": [
+                                      "link",
+                                      "header",
+                                      "text",
+                                      "contacts",
+                                      "pricelist",
+                                      "food_menu"
+                                    ]
+                                  },
+                                  "published": {
+                                    "type": "boolean"
+                                  },
+                                  "expanded": {
+                                    "type": "boolean"
+                                  },
+                                  "scheduleStart": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "scheduleEnd": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  },
+                                  "firstName": {
+                                    "type": "string"
+                                  },
+                                  "lastName": {
+                                    "type": "string"
+                                  },
+                                  "phone": {
+                                    "type": "string"
+                                  },
+                                  "email": {
+                                    "type": "string"
+                                  },
+                                  "url": {
+                                    "type": "string"
+                                  },
+                                  "addressLine1": {
+                                    "type": "string"
+                                  },
+                                  "addressLine2": {
+                                    "type": "string"
+                                  },
+                                  "city": {
+                                    "type": "string"
+                                  },
+                                  "country": {
+                                    "type": "string"
+                                  },
+                                  "postalCode": {
+                                    "type": "string"
+                                  },
+                                  "mapLat": {
+                                    "type": "number",
+                                    "format": "float"
+                                  },
+                                  "mapLon": {
+                                    "type": "number",
+                                    "format": "float"
+                                  },
+                                  "mapZoom": {
+                                    "type": "integer"
+                                  },
+                                  "notes": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "__component": {
+                                    "type": "string"
+                                  },
+                                  "widgetType": {
+                                    "type": "string",
+                                    "enum": [
+                                      "link",
+                                      "header",
+                                      "text",
+                                      "contacts",
+                                      "pricelist",
+                                      "food_menu"
+                                    ]
+                                  },
+                                  "published": {
+                                    "type": "boolean"
+                                  },
+                                  "expanded": {
+                                    "type": "boolean"
+                                  },
+                                  "scheduleStart": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "scheduleEnd": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  },
+                                  "currencyCode": {
+                                    "type": "string"
+                                  },
+                                  "items": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "number"
+                                        },
+                                        "itemTitle": {
+                                          "type": "string"
+                                        },
+                                        "itemPrice": {
+                                          "type": "string"
+                                        },
+                                        "url": {
+                                          "type": "string"
+                                        },
+                                        "itemImage": {
+                                          "type": "object",
+                                          "properties": {
+                                            "data": {
+                                              "type": "object",
+                                              "properties": {
+                                                "id": {
+                                                  "type": "number"
+                                                },
+                                                "attributes": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "name": {
+                                                      "type": "string"
+                                                    },
+                                                    "alternativeText": {
+                                                      "type": "string"
+                                                    },
+                                                    "caption": {
+                                                      "type": "string"
+                                                    },
+                                                    "width": {
+                                                      "type": "integer"
+                                                    },
+                                                    "height": {
+                                                      "type": "integer"
+                                                    },
+                                                    "formats": {},
+                                                    "hash": {
+                                                      "type": "string"
+                                                    },
+                                                    "ext": {
+                                                      "type": "string"
+                                                    },
+                                                    "mime": {
+                                                      "type": "string"
+                                                    },
+                                                    "size": {
+                                                      "type": "number",
+                                                      "format": "float"
+                                                    },
+                                                    "url": {
+                                                      "type": "string"
+                                                    },
+                                                    "previewUrl": {
+                                                      "type": "string"
+                                                    },
+                                                    "provider": {
+                                                      "type": "string"
+                                                    },
+                                                    "provider_metadata": {},
+                                                    "related": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "id": {
+                                                                "type": "number"
+                                                              },
+                                                              "attributes": {
+                                                                "type": "object",
+                                                                "properties": {}
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "folder": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "folderPath": {
+                                                      "type": "string"
+                                                    },
+                                                    "createdAt": {
+                                                      "type": "string",
+                                                      "format": "date-time"
+                                                    },
+                                                    "updatedAt": {
+                                                      "type": "string",
+                                                      "format": "date-time"
+                                                    },
+                                                    "createdBy": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "updatedBy": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
                               }
                             ]
                           }
@@ -10826,6 +12586,91 @@
                         },
                         "cancelFeedback": {
                           "type": "string"
+                        },
+                        "pageInterests": {
+                          "type": "object",
+                          "properties": {
+                            "data": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "attributes": {
+                                    "type": "object",
+                                    "properties": {
+                                      "code": {
+                                        "type": "string"
+                                      },
+                                      "label": {
+                                        "type": "string"
+                                      },
+                                      "createdAt": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      "updatedAt": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      "publishedAt": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      "createdBy": {
+                                        "type": "object",
+                                        "properties": {
+                                          "data": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {}
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "updatedBy": {
+                                        "type": "object",
+                                        "properties": {
+                                          "data": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {}
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "localizations": {
+                                        "type": "object",
+                                        "properties": {
+                                          "data": {
+                                            "type": "array",
+                                            "items": {}
+                                          }
+                                        }
+                                      },
+                                      "locale": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         },
                         "createdAt": {
                           "type": "string",
@@ -12001,6 +13846,18 @@
               "anyOf": [
                 {
                   "$ref": "#/components/schemas/MicrositesWidgetLinkComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/MicrositesWidgetHeaderComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/MicrositesWidgetFoodmenuComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/MicrositesWidgetContactComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/MicrositesWidgetPricelistComponent"
                 }
               ]
             }
@@ -12035,6 +13892,20 @@
           },
           "cancelFeedback": {
             "type": "string"
+          },
+          "pageInterests": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
           },
           "locale": {
             "type": "string"
@@ -12110,6 +13981,18 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/MicrositesWidgetLinkComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MicrositesWidgetHeaderComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MicrositesWidgetFoodmenuComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MicrositesWidgetContactComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MicrositesWidgetPricelistComponent"
                     }
                   ]
                 }
@@ -12144,6 +14027,20 @@
               },
               "cancelFeedback": {
                 "type": "string"
+              },
+              "pageInterests": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
               },
               "locale": {
                 "type": "string"
@@ -12822,6 +14719,12 @@
                                       }
                                     }
                                   },
+                                  "notifyWhenDomainsAvailable": {
+                                    "type": "boolean"
+                                  },
+                                  "defaultLanguage": {
+                                    "type": "string"
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -13075,6 +14978,18 @@
               "anyOf": [
                 {
                   "$ref": "#/components/schemas/MicrositesWidgetLinkComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/MicrositesWidgetHeaderComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/MicrositesWidgetFoodmenuComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/MicrositesWidgetContactComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/MicrositesWidgetPricelistComponent"
                 }
               ]
             }
@@ -13109,6 +15024,91 @@
           },
           "cancelFeedback": {
             "type": "string"
+          },
+          "pageInterests": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "updatedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "publishedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "createdBy": {
+                          "type": "object",
+                          "properties": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {}
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "updatedBy": {
+                          "type": "object",
+                          "properties": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {}
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "localizations": {
+                          "type": "object",
+                          "properties": {
+                            "data": {
+                              "type": "array",
+                              "items": {}
+                            }
+                          }
+                        },
+                        "locale": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           },
           "createdAt": {
             "type": "string",
@@ -13396,6 +15396,379 @@
           }
         }
       },
+      "MicrositesWidgetHeaderComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "widgetType": {
+            "type": "string",
+            "enum": [
+              "link",
+              "header",
+              "text",
+              "contacts",
+              "pricelist",
+              "food_menu"
+            ]
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "expanded": {
+            "type": "boolean"
+          },
+          "scheduleStart": {
+            "type": "string",
+            "format": "date"
+          },
+          "scheduleEnd": {
+            "type": "string",
+            "format": "date"
+          },
+          "title": {
+            "type": "string"
+          },
+          "style": {
+            "type": "string",
+            "enum": [
+              "h1",
+              "h2",
+              "h3"
+            ]
+          }
+        }
+      },
+      "MicrositesWidgetFoodmenuComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "widgetType": {
+            "type": "string",
+            "enum": [
+              "link",
+              "header",
+              "text",
+              "contacts",
+              "pricelist",
+              "food_menu"
+            ]
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "expanded": {
+            "type": "boolean"
+          },
+          "scheduleStart": {
+            "type": "string",
+            "format": "date"
+          },
+          "scheduleEnd": {
+            "type": "string",
+            "format": "date"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      },
+      "MicrositesWidgetContactComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "widgetType": {
+            "type": "string",
+            "enum": [
+              "link",
+              "header",
+              "text",
+              "contacts",
+              "pricelist",
+              "food_menu"
+            ]
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "expanded": {
+            "type": "boolean"
+          },
+          "scheduleStart": {
+            "type": "string",
+            "format": "date"
+          },
+          "scheduleEnd": {
+            "type": "string",
+            "format": "date"
+          },
+          "title": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "addressLine1": {
+            "type": "string"
+          },
+          "addressLine2": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "mapLat": {
+            "type": "number",
+            "format": "float"
+          },
+          "mapLon": {
+            "type": "number",
+            "format": "float"
+          },
+          "mapZoom": {
+            "type": "integer"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "MicrositesWidgetPricelistItemComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "itemTitle": {
+            "type": "string"
+          },
+          "itemPrice": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "itemImage": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "attributes": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {},
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number",
+                        "format": "float"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {},
+                      "related": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "folder": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "folderPath": {
+                        "type": "string"
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "createdBy": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "updatedBy": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "MicrositesWidgetPricelistComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "widgetType": {
+            "type": "string",
+            "enum": [
+              "link",
+              "header",
+              "text",
+              "contacts",
+              "pricelist",
+              "food_menu"
+            ]
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "expanded": {
+            "type": "boolean"
+          },
+          "scheduleStart": {
+            "type": "string",
+            "format": "date"
+          },
+          "scheduleEnd": {
+            "type": "string",
+            "format": "date"
+          },
+          "title": {
+            "type": "string"
+          },
+          "currencyCode": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MicrositesWidgetPricelistItemComponent"
+            }
+          }
+        }
+      },
       "UserProfileRequest": {
         "type": "object",
         "required": [
@@ -13403,6 +15776,10 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "notifyWhenDomainsAvailable",
+              "defaultLanguage"
+            ],
             "type": "object",
             "properties": {
               "user": {
@@ -13427,6 +15804,12 @@
               },
               "billingAddress": {
                 "$ref": "#/components/schemas/SharedAddressComponent"
+              },
+              "notifyWhenDomainsAvailable": {
+                "type": "boolean"
+              },
+              "defaultLanguage": {
+                "type": "string"
               }
             }
           }
@@ -13480,6 +15863,10 @@
       },
       "UserProfile": {
         "type": "object",
+        "required": [
+          "notifyWhenDomainsAvailable",
+          "defaultLanguage"
+        ],
         "properties": {
           "user": {
             "type": "object",
@@ -14014,6 +16401,12 @@
                                       }
                                     }
                                   },
+                                  "notifyWhenDomainsAvailable": {
+                                    "type": "boolean"
+                                  },
+                                  "defaultLanguage": {
+                                    "type": "string"
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -14121,6 +16514,12 @@
           },
           "billingAddress": {
             "$ref": "#/components/schemas/SharedAddressComponent"
+          },
+          "notifyWhenDomainsAvailable": {
+            "type": "boolean"
+          },
+          "defaultLanguage": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
