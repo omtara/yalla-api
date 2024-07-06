@@ -33,6 +33,16 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.address"
+    },
+    "notifyWhenDomainsAvailable": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "defaultLanguage": {
+      "type": "string",
+      "required": true,
+      "default": "en"
     }
   }
 }

@@ -1,4 +1,11 @@
 module.exports = ({ env }) => ({
+  "users-permissions": {
+    config: {
+      register: {
+        allowedFields: ["firstName", "lastName"],
+      },
+    },
+  },
   email: {
     config: {
       provider: 'nodemailer',
@@ -19,5 +26,9 @@ module.exports = ({ env }) => ({
   },
   seo: {
     enabled: true,
+  },
+  'microsite': {
+    enabled: true,
+    resolve: './src/plugins/microsite'
   },
 });
